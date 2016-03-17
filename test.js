@@ -6,6 +6,8 @@ import fn from './'
 test('main', async t => {
   await execa.shell('rm -rf temp')
   await execa.shell(`
+    git config user.email "you@example.com"
+	  git config user.name "Your Name"
     mkdir temp &&
     cd temp &&
     git init &&
