@@ -35,21 +35,21 @@ Type: `object`
 
 ##### from
 
-Type: `string`
+Type: `string`  
 Required: `true`
 
 From this tag.
 
 ##### to
 
-Type: `string`
+Type: `string`  
 Default: `''`
 
 Before this tag, default is `HEAD`.
 
 ##### cwd
 
-Type: `string`
+Type: `string`  
 Default: `process.cwd()`
 
 Choose a working directory to resolve commits
