@@ -19,7 +19,7 @@ commitsBetween({from: 'v0.0.1'})
 commitsBetween({from: 'v0.0.1', to: 'v0.0.2'})
 // commits from tag v0.0.1 to v0.0.2
 
-//=> return
+//=> return a Promise which resolves:
 [
   ["title line", "full commit message"]
 ]
