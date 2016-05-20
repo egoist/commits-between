@@ -1,18 +1,21 @@
 'use strict'
-const execa = require('execa')
+const toArray = require('stream-to-array')
+const parser = require('git-log-parser')
 
 function between(options) {
   options = options || {}
-  const from = options.from
-  if (!from) {
-    return Promise.reject(new Error('Expected from'))
-  }
+  const from = options.from || ''
   const to = options.to || ''
   const cwd = options.cwd
-  return execa
-    .shell(`git log --pretty=format:%s[%%===%%]%b ${from}..${to}`, {cwd})
-    .then(result => result.stdout)
-    .then(result => result.split('\n').map(message => message.split('[%===%]')))
+
+  let argv
+  if (!from && !argv) {
+    argv = ''
+  } else {
+    argv = `${from}..${to}`
+  }
+
+  return toArray(parser.parse({_: argv}, {cwd}))
 }
 
 module.exports = between

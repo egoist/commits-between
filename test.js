@@ -24,7 +24,6 @@ test('main', async t => {
     from: 'v0.0.0',
     cwd: path.join(__dirname, 'temp')
   }
-  const [res] = await fn(opts)
-  t.is(res[0], 'yeah')
-  t.is(res[1], 'hello world')
+  const [ret] = await fn(opts)
+  t.is(ret.subject, 'yeah')
 })
