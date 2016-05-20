@@ -56,14 +56,12 @@ Type: `object`
 ##### from
 
 Type: `string`  
-Required: `true`
 
 From this tag or commit hash.
 
 ##### to
 
 Type: `string`  
-Default: `''`
 
 Before this tag or commit hash, default is `HEAD`.
 
