@@ -1,6 +1,6 @@
 {
   "name": "commits-between",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Get commit messages bewteen git tags.",
   "license": "MIT",
   "repository": "egoist/commits-between",
