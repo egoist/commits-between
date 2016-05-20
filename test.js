@@ -1,11 +1,11 @@
 import path from 'path'
+import {execSync} from 'child_process'
 import test from 'ava'
-import execa from 'execa'
 import fn from './'
 
 test('main', async t => {
-  await execa.shell('rm -rf temp')
-  await execa.shell(`
+  execSync('rm -rf temp')
+  execSync(`
     mkdir temp &&
     cd temp &&
     git init &&
