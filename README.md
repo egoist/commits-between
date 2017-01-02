@@ -37,8 +37,7 @@ commitsBetween({from: 'v0.0.1', to: 'v0.0.2'})
     subject: 'yeah',
     body: 'hello world\n' } ]
 
-// since we use `git log --pretty=format:%s%b to get commits`
-// so commit hash works too
+// commit hash works too
 commitsBetween({from: '73e7dab2b07e68b3', to: 'ee36f4bcc7bcaf'})
 
 // or all commits
