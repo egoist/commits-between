@@ -19,7 +19,7 @@ commitsBetween({from: 'v0.0.1'})
 commitsBetween({from: 'v0.0.1', to: 'v0.0.2'})
 // commits from tag v0.0.1 to v0.0.2
 
-//=> return a Promise which resolves:
+//=> return a __Promise__ which resolves:
 [ { commit:
      { long: 'd3c1d4277bea361e2aec19068f909262cf51f678',
        short: 'd3c1d42' },
@@ -48,6 +48,8 @@ commitsBetween()
 ## API
 
 ### commitsBetween(options)
+
+Return a **Promise** which resolves an array of commits.
 
 #### options
 
